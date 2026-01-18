@@ -5019,6 +5019,7 @@ img[src="static/forums/locked_read.png"] {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  visibility: hidden;
 }
 
 #us_pop span {
