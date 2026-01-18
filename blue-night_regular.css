@@ -1586,7 +1586,15 @@ img[src*="static/common/caticons/movies.png"] {
   font-size: 0.71rem;
   padding-top: 0.5em;
 }
-
+#dailygazelle img {
+  max-width: 100%;
+  padding: 12px;
+}
+#gazelletitle {
+  padding: 0  0 12px 12px !important;
+  display: block;
+  text-align: center
+}
 /************************************************************************
   3.1 - Forms */
 .form--horizontal .form__label {
@@ -2656,7 +2664,7 @@ table .colhead > td {
   border: none;
   margin-bottom: 1em;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  padding: 0.75rem 1rem !important;
+  /*! padding: 0.75rem 1rem !important; */
   border: 1px solid #3a4056;
 }
 
@@ -2717,7 +2725,7 @@ table .colhead > td {
   padding: 0.75rem 1rem;
 }
 
-.main-column {
+.main_column_bg {
   margin: 0 255px 10px 0;
   width: 715px;
   overflow: hidden;
@@ -5567,7 +5575,7 @@ body {
     max-width: 960px;
   }
 
-  .main-column {
+  .main_column_bg {
     flex: 0 0 75%;
     max-width: 75%;
   }
@@ -5602,7 +5610,7 @@ body {
     max-width: 1140px;
   }
 
-  .main-column {
+  .main_column_bg {
     flex: 0 0 75%;
     max-width: 75%;
   }
@@ -5718,6 +5726,7 @@ body {
 }
 
 .main-column,
+.main_column_bg,
 .sidebar {
   position: relative;
   width: 100%;
