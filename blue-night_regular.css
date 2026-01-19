@@ -2462,7 +2462,12 @@ table .colhead > td {
 .tags {
   color: #a0a6b7;
 }
-
+.global_buffs {
+    position: absolute;
+  top: 50px;
+  left: 5px;
+  filter: opacity(0.7);
+}
 /* Search bar */
 #searchbars {
   background: #2f3447;
@@ -2725,7 +2730,7 @@ table .colhead > td {
   padding: 0.75rem 1rem;
 }
 
-.main_column_bg {
+.main_column {
   margin: 0 255px 10px 0;
   width: 715px;
   overflow: hidden;
@@ -3363,7 +3368,8 @@ img[src="static/common/symbols/uploader.png"] {
   border-top: 1px dotted #666;
   background-color: #1e1e1e;
 }
-#torrent_comments .sub {
+#torrent_comments .sub,
+#forums .sub {
   visibility: hidden;
 }
 .release-description-preview {
@@ -4184,7 +4190,7 @@ img[src="static/common/flags/vietnam.gif"] {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-.forum-post--unread {
+.forum_index .unread {
   border: 1px solid #4281da;
 }
 
@@ -4192,7 +4198,7 @@ img[src="static/common/flags/vietnam.gif"] {
   margin-top: 2rem;
 }
 
-.forum-post__id--staff-post {
+.post_id {
   color: #4281da;
 }
 
@@ -4205,6 +4211,11 @@ img[src="static/common/flags/vietnam.gif"] {
   padding: 7px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+#forums .colhead_dark > td > div {
+  float: left;
+  display: flex;
+  gap: 4px;
 }
 .colhead_dark > td > div > strong {
   display: inline-flex;
@@ -4374,23 +4385,25 @@ img[src="static/common/flags/vietnam.gif"] {
   transform-origin: center;
   transform: scaleX(1);
 }
-
+.forum_index h4 {
+    margin: 0
+}
 /* Forum table icons */
-.forum-topic--is-read,
-.forum-topic--is-unread,
-.forum-topic--is-read-locked-sticky,
-.forum-topic--is-read-sticky,
-.forum-topic--is-read-locked,
+.forum_index .read,
+.forum_index .unread,
+.forum_index .read_locked_sticky,
+.forum_index .read_sticky,
+.forum_index .read_locked,
 img[src="static/forums/locked_read.png"],
-.forum-topic--is-unread-locked-sticky,
-.forum-topic--is-unread-sticky {
+.forum_index .unread_locked_sticky,
+.forum_index .unread_sticky {
   width: 30px;
   height: 30px;
   box-sizing: border-box;
   padding-left: 30px;
 }
 
-.forum-topic--is-read {
+.forum_index .read {
   display: inline-block;
   width: 11px !important;
   padding: 11px !important;
@@ -4399,7 +4412,7 @@ img[src="static/forums/locked_read.png"],
   background-size: contain;
 }
 
-.forum-topic--is-unread {
+.forum_index .unread {
   display: inline-block;
   width: 11px !important;
   padding: 11px !important;
@@ -4408,7 +4421,7 @@ img[src="static/forums/locked_read.png"],
   background-size: contain;
 }
 
-.forum-topic--is-read-locked-sticky {
+.forum_index .read_locked_sticky {
   display: inline-block;
   width: 10px !important;
   padding: 10px !important;
@@ -4417,7 +4430,7 @@ img[src="static/forums/locked_read.png"],
   background-size: contain;
 }
 
-.forum-topic--is-read-sticky {
+.forum_index .read_sticky {
   display: inline-block;
   width: 10px !important;
   padding: 10px !important;
@@ -4426,7 +4439,7 @@ img[src="static/forums/locked_read.png"],
   background-size: contain;
 }
 
-.forum-topic--is-read-locked,
+.forum_index .read_locked,
 img[src="static/forums/locked_read.png"] {
   background: url("https://datfunc.github.io/ptp/assets/icons/topic-locked-read.svg")
     no-repeat left center;
@@ -4439,7 +4452,7 @@ img[src="static/forums/locked_read.png"] {
   padding-left: 13px;
 }
 
-.forum-topic--is-unread-locked-sticky {
+.forum_index .unread_locked_sticky {
   display: inline-block;
   width: 10px !important;
   padding: 10px !important;
@@ -4448,7 +4461,7 @@ img[src="static/forums/locked_read.png"] {
   background-size: contain;
 }
 
-.forum-topic--is-unread-sticky {
+.forum_index .unread_sticky {
   display: inline-block;
   width: 9px;
   padding: 9px !important;
@@ -4457,7 +4470,7 @@ img[src="static/forums/locked_read.png"] {
   background-size: contain !important;
 }
 
-.forum-topic--is-unread-locked {
+.forum_index .unread_locked {
   width: 32px;
   height: 32px;
   background: url("https://datfunc.github.io/ptp/assets/icons/topic-locked-unread.svg")
@@ -5000,6 +5013,12 @@ img[src="static/forums/locked_read.png"] {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+#nav_userinfo a.username::after {
+  content: "\25be";
+  color: #949aac;
+  /*! padding-left: 0.1rem; */
+  font-size: 0.9rem;
 }
 #userinfo #nav_donate .r00, 
 #userinfo #nav_donate .r01, 
