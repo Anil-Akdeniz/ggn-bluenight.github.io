@@ -2745,11 +2745,6 @@ table .colhead > td {
   padding: 0.75rem 1rem;
 }
 
-.main_column {
-  margin: 0 255px 10px 0;
-  width: 715px;
-  overflow: hidden;
-}
 
 #messageformtable #username {
   margin-right: 2px;
