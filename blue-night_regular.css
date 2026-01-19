@@ -966,8 +966,15 @@ a[title="Close"]:hover {
   width: 100%;
   table-layout: fixed;
 }
-
-.bbcode-toolbar__button {
+#quickpostform #quickpost {
+  width: 100% !important;
+}
+.bbbutt {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+}
+.bbbutt a {
   width: 24px;
   height: 24px;
   float: left;
@@ -978,7 +985,7 @@ a[title="Close"]:hover {
   transition: all 0.3s;
 }
 
-.bbcode-toolbar__button:hover {
+.bbbutt a:hover {
   opacity: 1;
   transform: translateY(-0.1rem);
 }
@@ -988,102 +995,108 @@ a[title="Close"]:hover {
 }
 
 /* BBCode Icons */
-.js-bbcode-toolbar__bold-button {
+#bb_bold {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/bold_alt.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__italic-button {
+#bb_ita {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/italic.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__underline-button {
+#bb_und {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/underline.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__strikethrough-button {
+#bb_strk {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/strikethrough.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__link-button {
+#bb_link {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/link.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__image-button {
+#bb_img {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/image.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__hide-button {
+#bb_hide {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/hide.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__spoiler-button {
+#bb_spoil {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/spoiler.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__quote-button {
+#bb_quote {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/quote.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__size-button {
+#bb__size {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/font-size.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__color-button {
+#bb_color {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/color.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__youtube-button {
+#bb_youtube {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/vid-ut.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__mediainfo-button {
+#bb_mediainfo {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/mediainfo.svg")
     no-repeat;
 }
-
-.js-bbcode-toolbar__align-center-button {
+#bb_lef {
+  background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/align-left.svg")
+    no-repeat;
+}
+#bb_cent {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/align.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__align-right-button {
+#bb_righ {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/align-right.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__code-button {
+#bb_code {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/code.svg")
     no-repeat;
 }
-
-.js-bbcode-toolbar__list-button {
+#bb_list {
+  background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/code.svg")
+    no-repeat;
+}
+.js-bbcode-toolbar__list {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/bullet-list.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__emoticon-button {
+#bb_emoticon {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/emojis.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__comparison-button {
+.js-bbcode-toolbar__comparison {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/compare.svg")
     no-repeat;
 }
 
-.js-bbcode-toolbar__staff-button {
+.js-bbcode-toolbar__staff {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/warning_alt.svg")
     no-repeat;
 }
@@ -1092,27 +1105,27 @@ a[title="BBCode help"] .bbcode-toolbar__button {
   background: url("https://datfunc.github.io/ptp/assets/icons/toolbar/question.svg")
     no-repeat;
 }
-
-.js-bbcode-toolbar__align-center-button,
-.js-bbcode-toolbar__align-right-button,
-.js-bbcode-toolbar__bold-button,
-.js-bbcode-toolbar__code-button,
-.js-bbcode-toolbar__color-button,
-.js-bbcode-toolbar__comparison-button,
-.js-bbcode-toolbar__emoticon-button,
-.js-bbcode-toolbar__hide-button,
-.js-bbcode-toolbar__image-button,
-.js-bbcode-toolbar__italic-button,
-.js-bbcode-toolbar__link-button,
-.js-bbcode-toolbar__list-button,
-.js-bbcode-toolbar__mediainfo-button,
-.js-bbcode-toolbar__quote-button,
-.js-bbcode-toolbar__size-button,
-.js-bbcode-toolbar__spoiler-button,
-.js-bbcode-toolbar__strikethrough-button,
-.js-bbcode-toolbar__underline-button,
-.js-bbcode-toolbar__youtube-button,
-.js-bbcode-toolbar__staff-button,
+#bb_lef,
+#bb_cent,
+#bb_righ,
+#bb_bold,
+#bb_code,
+#bb_color,
+#bb_comparison,
+#bb_emoticon,
+#bb_hide,
+#bb_img,
+#bb_ita,
+#bb_link,
+#bb_list,
+#bb_mediainfo,
+#bb_quote,
+#bb_size,
+#bb_spoil,
+#bb_strk,
+#bb_und,
+#bb_youtube,
+#bb_staff,
 a[title="BBCode help"] .bbcode-toolbar__button {
   background-size: contain;
   background-position: center center !important;
@@ -1872,7 +1885,7 @@ select,
 select option,
 select option:first-child {
   color: #949aac;
-  padding: 0.3rem;
+  padding: 0;
 }
 
 select:focus {
@@ -2672,7 +2685,9 @@ table .colhead > td {
   /*! padding: 0.75rem 1rem !important; */
   border: 1px solid #3a4056;
 }
-
+.box.pad {
+  padding: 0.75rem 1rem;
+}
 .box .head {
   background-color: rgba(7, 11, 22, 0.9);
   border: none;
@@ -4212,7 +4227,9 @@ img[src="static/common/flags/vietnam.gif"] {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-#forums .colhead_dark > td > div {
+#forums .colhead_dark > td > div,
+#forums .colhead_dark > td > span
+{
   float: left;
   display: flex;
   gap: 4px;
@@ -4342,7 +4359,7 @@ img[src="static/common/flags/vietnam.gif"] {
   margin-right: 0.15rem;
 }
 
-.forum-post__body {
+.send_form  {
   display: table-cell;
   vertical-align: top;
   padding: 10px;
